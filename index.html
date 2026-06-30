@@ -237,6 +237,9 @@ em,.italic{font-style:italic}
   border:1px solid var(--line-d-2);background:rgba(185,128,80,.05)}
 .hero-cta-row{display:flex;flex-wrap:wrap;gap:1.4rem 2rem;align-items:center}
 .hero-portrait{position:relative}
+.hero-img{width:100%;height:auto;display:block;
+  border-radius:16px;border:1px solid var(--line-d-2);
+  box-shadow:0 36px 84px -36px rgba(0,0,0,.7),0 0 0 6px rgba(185,128,80,.05)}
 .scrolldown{position:absolute;left:50%;bottom:clamp(1rem,3vh,2rem);transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:4;
   font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-mute)}
@@ -448,6 +451,13 @@ em,.italic{font-style:italic}
 .gallery figure{margin:0}
 .gallery figcaption{margin-top:.7rem;font-family:var(--serif);font-style:italic;color:var(--on-light-mute);font-size:.95rem;text-align:center}
 .section--dark .gallery figcaption{color:var(--on-dark-mute)}
+.gallery-img{width:100%;height:auto;display:block;
+  border-radius:16px;border:1px solid var(--line-l-2);box-shadow:0 24px 50px -30px rgba(90,46,34,.5)}
+.proof-card{margin:0}
+.proof-img{width:100%;height:auto;display:block;border-radius:16px;
+  border:1px solid var(--line-l-2);box-shadow:0 24px 50px -30px rgba(90,46,34,.5)}
+.section--dark .proof-img,.section--darker .proof-img{border-color:var(--line-d-2);box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}
+.section--dark .gallery-img,.section--darker .gallery-img{border-color:var(--line-d-2);box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}
 
 .testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:clamp(1rem,2vw,1.6rem);margin-top:clamp(2rem,4vh,3rem)}
 .testi .t{padding:clamp(1.5rem,2.4vw,2.1rem);border-radius:18px;border:1px solid var(--line-l);background:var(--blanco);
@@ -718,11 +728,7 @@ em,.italic{font-style:italic}
           </div>
         </div>
         <div class="hero-portrait reveal-zoom" style="--d:.3s">
-          <div class="ph ph--portrait">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div class="ph-label">Foto principal — retrato de la mentora / resultado premium</div>
-            <div class="ph-ratio">Vertical · 4:5</div>
-          </div>
+          <img class="hero-img" src="assets/area-membros.webp" alt="Área de miembros del Método MP · Mechas Premium" width="1240" height="1447" loading="eager" decoding="async">
         </div>
       </div>
     </div>
@@ -1003,9 +1009,9 @@ em,.italic{font-style:italic}
 
       <!-- GALERÍA: sustituir por fotos reales -->
       <div class="gallery">
-        <figure class="reveal" style="--d:.05s"><div class="ph ph--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ph-label">Tu imagen</div><div class="ph-ratio">Vertical · 4:5</div></div><figcaption>Tu imagen</figcaption></figure>
-        <figure class="reveal" style="--d:.12s"><div class="ph ph--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ph-label">Tus resultados (antes / después)</div><div class="ph-ratio">Vertical · 4:5</div></div><figcaption>Tus resultados</figcaption></figure>
-        <figure class="reveal" style="--d:.19s"><div class="ph ph--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ph-label">Tu marca</div><div class="ph-ratio">Vertical · 4:5</div></div><figcaption>Tu marca</figcaption></figure>
+        <figure class="reveal" style="--d:.05s"><img class="gallery-img" src="assets/galeria-1.webp" alt="Resultado balayage · Método MP" width="760" height="950" loading="lazy" decoding="async"><figcaption>Tu imagen</figcaption></figure>
+        <figure class="reveal" style="--d:.12s"><img class="gallery-img" src="assets/galeria-2.webp" alt="Resultado de mechas · Método MP" width="760" height="950" loading="lazy" decoding="async"><figcaption>Tus resultados</figcaption></figure>
+        <figure class="reveal" style="--d:.19s"><img class="gallery-img" src="assets/galeria-3.webp" alt="Mechas premium · Método MP" width="760" height="950" loading="lazy" decoding="async"><figcaption>Tu marca</figcaption></figure>
       </div>
       <p class="chart-cap reveal" style="--d:.1s">El método te da la estructura para convertir cada resultado en contenido que <span class="hl">atrae clientas</span> y construye tu autoridad.</p>
 
@@ -1014,9 +1020,9 @@ em,.italic{font-style:italic}
         <div class="kicker" style="justify-content:center"><span class="tick"></span>Lo que dicen las que ya entraron</div>
       </div>
       <div class="testi">
-        <div class="t reveal" style="--d:.05s"><div class="stars">★★★★★</div><p class="quote">«[Pega aquí el testimonio real de tu alumna — resultado concreto, en sus palabras.]»</p><div class="who"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="nm">Nombre de la alumna</div><div class="role">Colorista · Ciudad</div></div></div></div>
-        <div class="t reveal" style="--d:.12s"><div class="stars">★★★★★</div><p class="quote">«[Pega aquí otro testimonio real — antes y después de entrar al método.]»</p><div class="who"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="nm">Nombre de la alumna</div><div class="role">Colorista · Ciudad</div></div></div></div>
-        <div class="t reveal" style="--d:.19s"><div class="stars">★★★★★</div><p class="quote">«[Tercer testimonio real — números, agenda llena, marcas, etc.]»</p><div class="who"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="nm">Nombre de la alumna</div><div class="role">Colorista · Ciudad</div></div></div></div>
+        <figure class="proof-card reveal" style="--d:.05s"><img class="proof-img" src="assets/prova-1.webp" alt="Resultado real de alumna · 15K y +300 alumnas" width="860" height="1075" loading="lazy" decoding="async"></figure>
+        <figure class="proof-card reveal" style="--d:.12s"><img class="proof-img" src="assets/prova-2.webp" alt="Comentario real: «Enhorabuena equipo, estoy muy feliz»" width="550" height="688" loading="lazy" decoding="async"></figure>
+        <figure class="proof-card reveal" style="--d:.19s"><img class="proof-img" src="assets/prova-3.webp" alt="Camino a los 50k seguidores en verano" width="762" height="952" loading="lazy" decoding="async"></figure>
       </div>
     </div>
   </section>
