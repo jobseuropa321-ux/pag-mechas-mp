@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método MP · Mechas Premium — Conviértete en la referencia</title>
+<meta name="description" content="Curso, aplicación y mentoría para pasar de profesional común a la gran referencia del mercado. Técnica, imagen y alcance — todo en un solo ecosistema.">
+<meta name="theme-color" content="#151211">
+<meta property="og:title" content="Método MP · Mechas Premium">
+<meta property="og:description" content="De una profesional común a una gran referencia del mercado.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20fill='%23151211'/%3E%3Ctext%20x='50'%20y='68'%20text-anchor='middle'%20font-family='Georgia,serif'%20font-size='52'%20fill='%23B98050'%3EMP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/open-sauce-sans" rel="stylesheet">
+
+<style>
+/* ============================================================
+   MÉTODO MP · MECHAS PREMIUM — Página de Ventas
+   Sistema: warm-black + marfil + dorado bronce · Bodoni / Lora / Open Sauce
+   Ritmo editorial: secciones oscuras ↔ claras
+   ============================================================ */
+:root{
+  /* — Base oscura — */
+  --black:#000000; --noir:#0D0C0D; --espresso:#151211; --espresso-2:#1B1513; --coal:#141414;
+  /* — Neutros claros — */
+  --marfil:#FFF6E5; --creme:#E9E0D4; --blanco:#FFFFFF;
+  /* — Dorado & marrones — */
+  --gold:#B98050; --gold-lt:#D8B188; --gold-pale:#EAD2B4; --tan:#D1AD97; --marron:#855335; --marron-d:#5A2E22;
+  /* — Acentos puntuales — */
+  --blush:#F7C4C5; --rojo:#D7472F;
+  /* — Texto sobre oscuro — */
+  --on-dark:#FFF6E5; --on-dark-soft:#E5D8C6; --on-dark-mute:#B69E88;
+  /* — Texto sobre claro — */
+  --on-light:#2C1B12; --on-light-soft:#5A3B2A; --on-light-mute:#8C6F5B;
+  /* — Líneas — */
+  --line-d:rgba(185,128,80,.22); --line-d-2:rgba(185,128,80,.42);
+  --line-l:rgba(90,46,34,.16); --line-l-2:rgba(90,46,34,.30);
+  /* — Gradientes balayage — */
+  --balayage:linear-gradient(177deg,#7E4E32 0%,#B98050 48%,#EAD2B4 100%);
+  --balayage-h:linear-gradient(100deg,#855335 0%,#B98050 44%,#E6C8A2 100%);
+  --gold-sheen:linear-gradient(100deg,#9A6B41,#D8B188 40%,#F2E2CC 52%,#D8B188 64%,#9A6B41);
+  /* — Tipografía — */
+  --display:'Fraunces','Bodoni Moda',Georgia,serif;
+  --serif:'Lora',Georgia,serif;
+  --sans:'Open Sauce Sans','Manrope',system-ui,-apple-system,sans-serif;
+  /* — Movimiento — */
+  --ease:cubic-bezier(.16,.72,.18,1);
+  --spring:cubic-bezier(.175,.885,.32,1.275);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;min-width:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  background:var(--espresso); color:var(--on-dark-soft);
+  font-family:var(--sans); line-height:1.62; font-size:17px;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(185,128,80,.32);color:var(--marfil)}
+
+/* ---------- Atmósfera global (sobre fondo oscuro) ---------- */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:0}
+.fx-grain{opacity:.05;mix-blend-mode:overlay;background-size:180px 180px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* polvo dorado flotante — por sección oscura */
+.dust{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.dust i{position:absolute;bottom:-12px;border-radius:50%;
+  background:radial-gradient(circle,rgba(216,177,136,.95),rgba(216,177,136,0) 70%);
+  opacity:.5;animation:drift linear infinite}
+@keyframes drift{0%{transform:translateY(0) translateX(0);opacity:0}
+  8%{opacity:.6}88%{opacity:.4}100%{transform:translateY(-104vh) translateX(24px);opacity:0}}
+
+/* ---------- Estructura de secciones ---------- */
+.section{position:relative;z-index:2;overflow:hidden;
+  padding:clamp(4.5rem,11vh,9rem) clamp(1.4rem,6vw,5rem)}
+.section--dark{background:var(--espresso);color:var(--on-dark-soft)}
+.section--darker{background:linear-gradient(180deg,var(--noir),var(--espresso) 60%);color:var(--on-dark-soft)}
+.section--light{background:var(--marfil);color:var(--on-light-soft)}
+.section--cream{background:var(--creme);color:var(--on-light-soft)}
+.section--dark .dust{display:block}
+.section--light .dust,.section--cream .dust{display:none}
+/* glow ambiente solo en oscuras */
+.section--dark::before,.section--darker::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(42% 36% at 82% 12%,rgba(185,128,80,.16),transparent 60%),
+             radial-gradient(46% 40% at 10% 92%,rgba(133,83,53,.14),transparent 62%)}
+/* viñeta sutil en oscuras */
+.section--dark .vig,.section--darker .vig{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(130% 120% at 50% 40%,transparent 60%,rgba(0,0,0,.42) 100%)}
+.wrap{position:relative;z-index:3;width:min(1180px,100%);margin:0 auto}
+.wrap--narrow{width:min(820px,100%)}
+.center{text-align:center}
+.center .lead,.center .body{margin-left:auto;margin-right:auto}
+
+/* transición ondulada entre secciones de distinto "mundo" (oscuro ↔ claro) */
+.sdivider{position:relative;width:100%;height:clamp(44px,6.5vw,92px);line-height:0;z-index:3;pointer-events:none;margin:-1px 0;overflow:hidden}
+.sdivider svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+/* marca de agua numeral */
+.wm{position:absolute;z-index:0;pointer-events:none;user-select:none;
+  font-family:var(--display);font-weight:700;line-height:.74;white-space:nowrap;
+  bottom:-.16em;right:.02em;font-size:clamp(9rem,28vw,26rem);
+  color:transparent;-webkit-text-stroke:1px rgba(185,128,80,.07)}
+.section--light .wm,.section--cream .wm{-webkit-text-stroke:1px rgba(90,46,34,.06)}
+.wm--word{font-size:clamp(5.5rem,17vw,16rem);letter-spacing:-.02em}
+
+/* ---------- Tipografía ---------- */
+.kicker{display:inline-flex;align-items:center;gap:.85em;
+  font-family:var(--sans);text-transform:uppercase;letter-spacing:.34em;
+  font-size:clamp(.64rem,1vw,.78rem);font-weight:600;color:var(--gold);
+  margin-bottom:clamp(1rem,2.6vh,1.7rem)}
+.kicker .tick{width:clamp(26px,3vw,52px);height:2px;border-radius:2px;
+  background:var(--balayage-h);transform:scaleX(0);transform-origin:left;
+  transition:transform 1s var(--ease) var(--d,.1s)}
+.in .kicker .tick{transform:scaleX(1)}
+.center .kicker{justify-content:center}
+
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:0}
+.display{font-family:var(--display);font-weight:600;
+  font-size:clamp(2.6rem,7vw,6rem);line-height:1;letter-spacing:-.01em;color:var(--on-dark)}
+.h-xl{font-size:clamp(2.1rem,5.2vw,4.4rem)}
+.h-lg{font-size:clamp(1.8rem,4vw,3.4rem)}
+.h-md{font-size:clamp(1.45rem,2.7vw,2.4rem)}
+.headline{font-size:clamp(2rem,5vw,4.2rem);margin-bottom:clamp(1rem,2.6vh,1.8rem);color:var(--on-dark)}
+.section--light .headline,.section--cream .headline,
+.section--light h2,.section--cream h2,
+.section--light h3,.section--cream h3{color:var(--on-light)}
+em,.italic{font-style:italic}
+.headline em,.display em{color:var(--gold-lt)}
+.section--light .headline em,.section--cream .headline em{color:var(--marron)}
+.charm{font-family:var(--serif);font-style:italic;font-weight:500}
+.lead{font-size:clamp(1.05rem,1.6vw,1.42rem);line-height:1.62;max-width:54ch;color:var(--on-dark-soft)}
+.section--light .lead,.section--cream .lead{color:var(--on-light-soft)}
+.body{font-size:clamp(1.02rem,1.4vw,1.28rem);line-height:1.66;max-width:50ch;color:var(--on-dark-soft)}
+.body.wide{max-width:64ch}
+.body p+p{margin-top:.78em}
+.section--light .body,.section--cream .body{color:var(--on-light-soft)}
+.hl{color:var(--gold-lt);font-weight:600}
+.section--light .hl,.section--cream .hl{color:var(--marron)}
+.hl-grad{background:var(--balayage-h);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+.strong{color:var(--on-dark);font-weight:700}
+.section--light .strong,.section--cream .strong{color:var(--on-light)}
+.quote{font-family:var(--serif);font-style:italic;color:var(--on-dark)}
+.section--light .quote,.section--cream .quote{color:var(--on-light)}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(28px);
+  transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
+.reveal.lg{transform:translateY(44px)}
+.in .reveal,.reveal.in{opacity:1;transform:none}
+.reveal-zoom{opacity:0;transform:scale(.94);transition:opacity 1s var(--ease) var(--d,0s),transform 1s var(--ease) var(--d,0s)}
+.in .reveal-zoom,.reveal-zoom.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-zoom{opacity:1!important;transform:none!important;transition:none}
+  .dust,.draw .dp{display:none}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;animation-delay:0ms!important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- SVG line-draw ---------- */
+.illu{display:inline-block;vertical-align:middle;color:var(--gold-lt)}
+.section--light .illu,.section--cream .illu{color:var(--marron)}
+.illu .dp,.illu line,.illu path,.illu rect,.illu circle,.illu polyline{vector-effect:non-scaling-stroke}
+.draw .dp{stroke-dasharray:var(--len,400);stroke-dashoffset:var(--len,400);
+  transition:stroke-dashoffset 1.5s var(--ease) var(--dd,.2s)}
+.in .draw .dp{stroke-dashoffset:0}
+.illu-top{margin-bottom:clamp(1rem,2.4vh,1.6rem)}
+.illu-top .illu{width:clamp(54px,7vw,96px);height:auto}
+@keyframes twk{0%,100%{opacity:.3;transform:scale(.82)}50%{opacity:1;transform:scale(1.12)}}
+.twk{transform-box:fill-box;transform-origin:center;animation:twk 2.4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.floaty{animation:floaty 5s ease-in-out infinite}
+
+/* ============================================================
+   CTA — botón glass con "bloom" (inspirado en Uiverse, en clave dorada)
+   ============================================================ */
+.cta{position:relative;display:inline-flex;align-items:center;gap:.7em;
+  font-family:var(--sans);font-weight:700;letter-spacing:.02em;
+  font-size:clamp(1rem,1.4vw,1.18rem);
+  color:#2A1A10;
+  padding:1.15em 2.3em;border:none;border-radius:999px;cursor:pointer;
+  background:var(--balayage-h);background-size:160% 100%;
+  box-shadow:0 16px 40px -14px rgba(185,128,80,.7),0 2px 0 rgba(255,245,229,.35) inset;
+  overflow:hidden;isolation:isolate;
+  transition:transform .4s var(--spring),box-shadow .4s var(--ease),background-position .6s var(--ease);
+  animation:ctaGlow 3.4s ease-in-out infinite}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 100%);
+  transform:translateX(-100%) skewX(-12deg);transition:transform .7s var(--ease)}
+.cta:hover{transform:translateY(-3px) scale(1.035);background-position:100% 0;
+  box-shadow:0 26px 60px -14px rgba(185,128,80,.92)}
+.cta:hover::before{transform:translateX(100%) skewX(-12deg)}
+.cta:active{transform:translateY(-1px) scale(.98)}
+.cta .arrow{transition:transform .4s var(--spring)}
+.cta:hover .arrow{transform:translateX(5px)}
+.cta--lg{font-size:clamp(1.06rem,1.6vw,1.3rem);padding:1.25em 2.7em}
+@keyframes ctaGlow{0%,100%{box-shadow:0 16px 40px -14px rgba(185,128,80,.6),0 2px 0 rgba(255,245,229,.35) inset}
+  50%{box-shadow:0 22px 56px -12px rgba(185,128,80,.95),0 2px 0 rgba(255,245,229,.35) inset}}
+.cta-ghost{display:inline-flex;align-items:center;gap:.6em;font-weight:600;letter-spacing:.04em;
+  font-size:.95rem;color:var(--gold-lt);padding:.6em 0;border-bottom:1px solid var(--line-d-2);
+  transition:color .3s,border-color .3s}
+.cta-ghost:hover{color:var(--marfil);border-color:var(--gold)}
+.cta-note{margin-top:1rem;font-size:.82rem;letter-spacing:.02em;color:var(--on-dark-mute);
+  display:flex;flex-wrap:wrap;gap:.5em 1.3em;align-items:center}
+.section--light .cta-note,.section--cream .cta-note{color:var(--on-light-mute)}
+.cta-note span{display:inline-flex;align-items:center;gap:.45em}
+.cta-note svg{width:16px;height:16px;color:var(--gold)}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{min-height:100svh;display:flex;align-items:center;
+  padding-top:clamp(5rem,12vh,8rem);padding-bottom:clamp(4rem,9vh,7rem)}
+.hero .wrap{width:min(1200px,100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero-spark{margin-bottom:1.4rem;color:var(--gold-lt)}
+.hero h1{margin:.1em 0 .4em}
+.hero .display .lh{display:block}
+.hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2vw,1.7rem);
+  color:var(--tan);max-width:30ch;margin-bottom:clamp(1.6rem,3vh,2.4rem)}
+.hero-sub b{font-style:normal;color:var(--gold-lt);font-weight:600}
+.hero-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:clamp(1.8rem,3.4vh,2.6rem)}
+.pill{font-family:var(--sans);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:600;color:var(--on-dark-soft);padding:.6em 1.2em;border-radius:999px;
+  border:1px solid var(--line-d-2);background:rgba(185,128,80,.05)}
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:1.4rem 2rem;align-items:center}
+.hero-portrait{position:relative}
+.scrolldown{position:absolute;left:50%;bottom:clamp(1rem,3vh,2rem);transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:4;
+  font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--on-dark-mute)}
+.scrolldown .chev{width:22px;height:22px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);
+  transform:rotate(45deg);animation:bob 1.8s var(--ease) infinite}
+@keyframes bob{0%,100%{transform:rotate(45deg) translate(0,0);opacity:.4}50%{transform:rotate(45deg) translate(4px,4px);opacity:1}}
+
+/* ---------- Image placeholders (para fotos reales) ---------- */
+.ph{position:relative;border-radius:18px;overflow:hidden;
+  background:
+    linear-gradient(135deg,rgba(185,128,80,.10),rgba(133,83,53,.04)),
+    repeating-linear-gradient(45deg,rgba(185,128,80,.05) 0 10px,transparent 10px 20px);
+  border:1.5px dashed var(--line-d-2);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;
+  text-align:center;padding:1.5rem;color:var(--on-dark-mute);min-height:220px}
+.section--light .ph,.section--cream .ph{border-color:var(--line-l-2);color:var(--on-light-mute);
+  background:linear-gradient(135deg,rgba(90,46,34,.06),rgba(133,83,53,.02)),
+    repeating-linear-gradient(45deg,rgba(90,46,34,.04) 0 10px,transparent 10px 20px)}
+.ph svg{width:38px;height:38px;color:var(--gold);opacity:.8}
+.ph .ph-label{font-size:.82rem;letter-spacing:.04em;line-height:1.4;max-width:24ch}
+.ph .ph-ratio{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
+.ph--portrait{aspect-ratio:4/5}
+.ph--square{aspect-ratio:1/1}
+.ph--wide{aspect-ratio:16/10}
+
+/* ============================================================
+   Listas y componentes de copy
+   ============================================================ */
+.beats{list-style:none;display:flex;flex-direction:column;gap:clamp(.5rem,1.4vh,.95rem);max-width:60ch}
+.beats li{position:relative;padding-left:1.7em;font-size:clamp(1.02rem,1.5vw,1.4rem);line-height:1.45;color:var(--on-dark-soft)}
+.beats li::before{content:"";position:absolute;left:0;top:.62em;width:.7em;height:.7em;border-radius:50%;
+  background:var(--balayage-h);box-shadow:0 0 12px rgba(185,128,80,.5)}
+.section--light .beats li,.section--cream .beats li{color:var(--on-light-soft)}
+
+.asks{list-style:none;display:flex;flex-direction:column;gap:0;max-width:64ch;margin-top:1rem}
+.asks li{display:flex;align-items:baseline;gap:.6em;font-size:clamp(1.05rem,1.7vw,1.55rem);
+  line-height:1.4;padding:clamp(.7rem,1.7vh,1.05rem) 0;border-bottom:1px solid var(--line-d)}
+.asks li:last-child{border-bottom:none}
+.asks li .qm{flex:none;font-family:var(--display);font-style:italic;color:var(--gold);font-size:1.2em;line-height:1}
+.asks li b{color:var(--on-dark);font-weight:700}
+
+.imagine{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.7rem,1.8vh,1.15rem);max-width:70ch}
+.imagine li{position:relative;padding-left:1.9em;font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.4;color:var(--on-dark-soft)}
+.imagine li::before{content:"";position:absolute;left:0;top:.18em;width:1.1em;height:1.1em;
+  background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D8B188' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 13l4 4L19 7'/%3E%3C/svg%3E")}
+
+/* ---------- Steps / plan ---------- */
+.plan{display:flex;flex-direction:column;gap:clamp(1rem,2.6vh,1.9rem);max-width:66ch;margin-top:.6rem}
+.plan .step{display:flex;gap:clamp(1rem,2vw,1.7rem);align-items:flex-start}
+.plan .num{font-family:var(--display);font-weight:600;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1;
+  min-width:1.4em;color:transparent;background:var(--balayage);-webkit-background-clip:text;background-clip:text}
+.plan .step h3{font-size:clamp(1.4rem,2.5vw,2.1rem);margin-bottom:.18em}
+.plan .step p{font-size:clamp(.98rem,1.4vw,1.22rem);line-height:1.5;color:var(--on-light-soft)}
+.section--dark .plan .step p,.section--darker .plan .step p{color:var(--on-dark-soft)}
+
+/* ---------- Ecosistema trio ---------- */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2.4vw,2rem);margin-top:clamp(2rem,4vh,3rem)}
+.trio .cell{padding:clamp(1.6rem,2.6vw,2.4rem);border-radius:18px;border:1px solid var(--line-d);
+  background:rgba(185,128,80,.04);transition:transform .5s var(--spring),border-color .4s,box-shadow .5s var(--ease)}
+.section--light .trio .cell,.section--cream .trio .cell{border-color:var(--line-l);background:rgba(255,255,255,.45)}
+.trio .cell:hover{transform:translateY(-6px);border-color:var(--line-d-2);box-shadow:0 24px 50px -28px rgba(185,128,80,.6)}
+.trio .cell svg{width:46px;height:46px;margin-bottom:1rem}
+.trio .cell h4{font-size:clamp(1.35rem,2.2vw,1.8rem);margin-bottom:.4em}
+.trio .cell p{font-size:.98rem;line-height:1.5;color:var(--on-dark-mute)}
+.section--light .trio .cell p,.section--cream .trio .cell p{color:var(--on-light-soft)}
+
+/* ============================================================
+   GRÁFICOS
+   ============================================================ */
+.chart-bars{display:flex;align-items:flex-end;justify-content:center;gap:clamp(1.4rem,6vw,5rem);
+  margin:clamp(1.6rem,3.6vh,2.8rem) auto 0}
+.bar-item{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.bar-val{font-family:var(--display);font-weight:600;font-size:clamp(1.05rem,2vw,1.8rem);
+  color:var(--on-dark-soft);font-variant-numeric:tabular-nums}
+.bar-col{height:clamp(150px,30vh,290px);width:clamp(56px,10vw,124px);display:flex;align-items:flex-end;
+  border-bottom:1px solid var(--line-d-2)}
+.bar-fill{width:100%;height:0;border-radius:10px 10px 0 0;
+  background:linear-gradient(180deg,#6E4628,#9A6B41 38%,#C9A06A 50%,#9A6B41 62%,#6E4628);
+  background-size:100% 260%;
+  transition:height 1.5s var(--ease) var(--d,.1s);
+  animation:barFlow 3.4s ease-in-out infinite alternate}
+.in .bar-fill{height:var(--h)}
+@keyframes barFlow{0%{background-position:50% 100%}100%{background-position:50% 0%}}
+.bar-lab{font-size:clamp(.72rem,1.05vw,.95rem);text-align:center;line-height:1.3;letter-spacing:.03em;color:var(--on-dark-mute)}
+.bar-item.ref .bar-val{font-size:clamp(1.5rem,3vw,2.7rem);color:var(--gold-lt)}
+.bar-item.ref .bar-fill{background:linear-gradient(180deg,#7E4E32,#B98050 38%,#EAD2B4 50%,#B98050 62%,#7E4E32);background-size:100% 260%;
+  animation:barFlow 3.4s ease-in-out infinite alternate,refGlow 2.8s ease-in-out infinite}
+@keyframes refGlow{0%,100%{box-shadow:0 0 26px rgba(185,128,80,.45)}50%{box-shadow:0 0 58px rgba(185,128,80,.82)}}
+.bar-item.ref .bar-lab{color:var(--gold-lt);font-weight:700}
+.chart-cap{font-size:clamp(.86rem,1.1vw,1.05rem);text-align:center;max-width:56ch;margin:clamp(1.4rem,3vh,2.2rem) auto 0;
+  line-height:1.55;color:var(--on-dark-mute)}
+.section--light .chart-cap,.section--cream .chart-cap{color:var(--on-light-mute)}
+
+/* fuentes de ingreso */
+.streams{display:flex;flex-direction:column;gap:clamp(1.6rem,3.4vh,2.6rem);margin-top:clamp(1.6rem,3vh,2.4rem);max-width:760px}
+.srtop{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.7rem}
+.srname{font-family:var(--display);font-size:clamp(1.1rem,1.8vw,1.5rem);color:var(--on-dark-soft)}
+.srname.ref{color:var(--gold-lt)}
+.srcount{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-mute)}
+.bar-track{height:clamp(20px,3vh,30px);border-radius:999px;background:rgba(185,128,80,.08);overflow:hidden}
+.seg-wrap{display:flex;height:100%;gap:3px;width:0;transition:width 1.4s var(--ease) var(--d,.1s)}
+.in .seg-wrap{width:var(--w)}
+.seg-wrap.solo .seg{background:#6E4628}
+.seg{flex:1;border-radius:999px}
+.seg-wrap.multi .seg{background:var(--gold-sheen);background-size:280% 100%;animation:segFlow 2.6s ease-in-out infinite alternate}
+@keyframes segFlow{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+.seg-wrap.multi .seg:nth-child(1){animation-delay:0s}
+.seg-wrap.multi .seg:nth-child(2){animation-delay:.1s}
+.seg-wrap.multi .seg:nth-child(3){animation-delay:.2s}
+.seg-wrap.multi .seg:nth-child(4){animation-delay:.3s}
+.seg-wrap.multi .seg:nth-child(5){animation-delay:.4s}
+.seg-wrap.multi .seg:nth-child(6){animation-delay:.5s}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.8rem}
+.legend span{font-size:.78rem;letter-spacing:.02em;color:var(--on-dark-mute);
+  padding-left:1.1em;position:relative}
+.legend span::before{content:"";position:absolute;left:0;top:.42em;width:.55em;height:.55em;border-radius:50%;background:var(--gold)}
+
+/* triángulo */
+.triwrap{max-width:760px;margin:clamp(1rem,2.6vh,1.8rem) auto 0}
+.triwrap svg{width:100%;height:auto;overflow:visible}
+.tri-stroke{fill:none;stroke:url(#balgrad);stroke-width:3;
+  stroke-dasharray:1800;stroke-dashoffset:1800;transition:stroke-dashoffset 2.2s var(--ease) .2s}
+.in .tri-stroke{stroke-dashoffset:0}
+.tri-dot{fill:var(--gold-lt)}
+.tri-trav{fill:var(--marfil)}
+.tri-l{fill:var(--on-dark);font-family:var(--display);font-weight:600}
+.tri-s{fill:var(--on-dark-mute);font-family:var(--serif);font-style:italic}
+.tri-c{fill:transparent;stroke:none;font-family:var(--display);font-weight:700;
+  background:var(--balayage)}
+.tri-c{fill:url(#balgrad)}
+
+/* ============================================================
+   OFERTA — pilares + tarjetas de entregables (hover spring)
+   ============================================================ */
+.pillar{margin-top:clamp(2rem,4vh,3.2rem)}
+.pillar+.pillar{margin-top:clamp(2.6rem,5vh,4rem)}
+.pillar-head{display:flex;align-items:center;gap:1.1rem;margin-bottom:clamp(1.2rem,2.6vh,1.8rem);
+  padding-bottom:1rem;border-bottom:1px solid var(--line-d)}
+.pillar-head .pnum{font-family:var(--display);font-weight:600;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1;
+  color:transparent;background:var(--balayage);-webkit-background-clip:text;background-clip:text}
+.pillar-head .picon{width:34px;height:34px;color:var(--gold-lt);flex:none}
+.pillar-head .ptitle{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,2rem);color:var(--on-dark)}
+.pillar-head .psub{font-family:var(--sans);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.section--light .pillar-head .ptitle,.section--cream .pillar-head .ptitle{color:var(--on-light)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:clamp(1rem,1.8vw,1.6rem)}
+.card{position:relative;padding:clamp(1.5rem,2.4vw,2.1rem);border-radius:18px;overflow:hidden;
+  background:rgba(185,128,80,.045);border:1px solid var(--line-d);
+  display:flex;flex-direction:column;gap:.55rem;isolation:isolate;
+  transform-origin:center;
+  transition:transform .55s var(--spring),border-color .4s var(--ease),box-shadow .55s var(--ease),background-color .4s}
+.section--light .card,.section--cream .card{background:rgba(255,255,255,.5);border-color:var(--line-l)}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;opacity:0;
+  background:radial-gradient(120% 100% at 0% 0%,rgba(185,128,80,.18),transparent 60%);transition:opacity .5s}
+.card:hover{transform:translateY(-8px) scale(1.018);border-color:var(--line-d-2);
+  box-shadow:0 30px 60px -30px rgba(185,128,80,.7)}
+.card:hover::after{opacity:1}
+.card .ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.card .cname{font-family:var(--display);font-size:clamp(1.18rem,1.9vw,1.5rem);line-height:1.12;color:var(--on-dark)}
+.section--light .card .cname,.section--cream .card .cname{color:var(--on-light)}
+.card .cval{flex:none;font-family:var(--sans);font-weight:700;font-size:.92rem;letter-spacing:.02em;
+  color:var(--gold-lt);padding:.32em .7em;border-radius:999px;border:1px solid var(--line-d-2);white-space:nowrap}
+.section--light .card .cval,.section--cream .card .cval{color:var(--marron);border-color:var(--line-l-2)}
+.card .cdesc{font-size:.96rem;line-height:1.5;color:var(--on-dark-mute)}
+.section--light .card .cdesc,.section--cream .card .cdesc{color:var(--on-light-soft)}
+.card.star{border-color:var(--line-d-2);background:rgba(185,128,80,.1)}
+.card.star::before{content:"★ El corazón del método";position:absolute;top:0;right:0;
+  font-family:var(--sans);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  color:#2A1A10;background:var(--balayage-h);padding:.5em 1em;border-bottom-left-radius:12px}
+.card.star .cname{padding-top:1.4em}
+
+/* ---------- App features grid ---------- */
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(1rem,1.8vw,1.5rem);margin-top:clamp(1.6rem,3vh,2.4rem)}
+.f{padding:clamp(1.3rem,2vw,1.7rem);border-radius:16px;border:1px solid var(--line-l);background:rgba(255,255,255,.5);
+  transition:transform .5s var(--spring),box-shadow .5s var(--ease),border-color .4s}
+.section--dark .f,.section--darker .f{border-color:var(--line-d);background:rgba(185,128,80,.045)}
+.f:hover{transform:translateY(-5px);box-shadow:0 22px 44px -26px rgba(185,128,80,.6);border-color:var(--line-l-2)}
+.section--dark .f:hover,.section--darker .f:hover{border-color:var(--line-d-2)}
+.f .fn{display:flex;align-items:center;gap:.7rem;margin-bottom:.55rem}
+.f .fn svg{width:26px;height:26px;color:var(--gold);flex:none}
+.f .fn h4{font-family:var(--display);font-size:clamp(1.08rem,1.6vw,1.3rem);color:var(--on-light)}
+.section--dark .f .fn h4,.section--darker .f .fn h4{color:var(--on-dark)}
+.f p{font-size:.92rem;line-height:1.48;color:var(--on-light-soft)}
+.section--dark .f p,.section--darker .f p{color:var(--on-dark-mute)}
+
+/* ============================================================
+   ¿Es para ti? · sí/no
+   ============================================================ */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.4vw,1.8rem);margin-top:clamp(1.6rem,3vh,2.4rem)}
+.fit-col{padding:clamp(1.5rem,2.6vw,2.2rem);border-radius:18px;border:1px solid var(--line-d)}
+.fit-col.yes{background:rgba(185,128,80,.08);border-color:var(--line-d-2)}
+.fit-col.no{background:rgba(255,255,255,.02)}
+.fit-h{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-size:clamp(1.2rem,2vw,1.6rem);
+  color:var(--on-dark);margin-bottom:1rem}
+.fit-h svg{width:30px;height:30px;flex:none}
+.fit-col.yes .fit-h svg{color:var(--gold-lt)}
+.fit-col.no .fit-h svg{color:var(--on-dark-mute)}
+.fit-col ul{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.fit-col li{font-size:clamp(.98rem,1.4vw,1.18rem);line-height:1.4;color:var(--on-dark-soft);padding-left:1.4em;position:relative}
+.fit-col li::before{content:"";position:absolute;left:0;top:.55em;width:.5em;height:.5em;border-radius:50%}
+.fit-col.yes li::before{background:var(--gold)}
+.fit-col.no li::before{background:var(--on-dark-mute)}
+.fit-col li b{color:var(--on-dark);font-weight:700}
+
+/* ============================================================
+   Galería + testimonios
+   ============================================================ */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.6rem);margin-top:clamp(1.6rem,3vh,2.4rem)}
+.gallery figure{margin:0}
+.gallery figcaption{margin-top:.7rem;font-family:var(--serif);font-style:italic;color:var(--on-light-mute);font-size:.95rem;text-align:center}
+.section--dark .gallery figcaption{color:var(--on-dark-mute)}
+
+.testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:clamp(1rem,2vw,1.6rem);margin-top:clamp(2rem,4vh,3rem)}
+.testi .t{padding:clamp(1.5rem,2.4vw,2.1rem);border-radius:18px;border:1px solid var(--line-l);background:var(--blanco);
+  display:flex;flex-direction:column;gap:1rem;transition:transform .5s var(--spring),box-shadow .5s var(--ease)}
+.section--dark .testi .t,.section--darker .testi .t{border-color:var(--line-d);background:rgba(185,128,80,.05)}
+.testi .t:hover{transform:translateY(-5px);box-shadow:0 24px 48px -28px rgba(185,128,80,.5)}
+.testi .stars{color:var(--gold);letter-spacing:.12em;font-size:1.05rem}
+.testi .quote{font-size:1.06rem;line-height:1.55}
+.testi .who{display:flex;align-items:center;gap:.8rem;margin-top:auto}
+.testi .who .ph{min-height:0;width:48px;height:48px;border-radius:50%;flex:none;padding:0}
+.testi .who .ph svg{width:20px;height:20px;margin:0}
+.testi .who .nm{font-weight:700;color:var(--on-light);font-size:.95rem}
+.section--dark .testi .who .nm,.section--darker .testi .who .nm{color:var(--on-dark)}
+.testi .who .role{font-size:.8rem;color:var(--on-light-mute)}
+.section--dark .testi .who .role,.section--darker .testi .who .role{color:var(--on-dark-mute)}
+
+/* ============================================================
+   Valor · stack
+   ============================================================ */
+.stack{max-width:640px;margin:clamp(1.6rem,3vh,2.4rem) auto 0;display:flex;flex-direction:column;gap:.2rem}
+.stack .row{display:flex;align-items:baseline;gap:1rem;padding:.85rem 0;border-bottom:1px dashed var(--line-l)}
+.section--dark .stack .row,.section--darker .stack .row{border-color:var(--line-d)}
+.stack .it{flex:1;font-size:clamp(.98rem,1.5vw,1.18rem);color:var(--on-light-soft)}
+.section--dark .stack .it,.section--darker .stack .it{color:var(--on-dark-soft)}
+.stack .it small{display:block;font-size:.78rem;color:var(--on-light-mute);letter-spacing:.02em}
+.stack .it.app{color:var(--marron);font-weight:600}
+.section--dark .stack .it.app,.section--darker .stack .it.app{color:var(--gold-lt)}
+.stack .vl{font-family:var(--display);font-weight:600;font-size:clamp(1rem,1.6vw,1.3rem);
+  color:var(--on-light);font-variant-numeric:tabular-nums;white-space:nowrap}
+.section--dark .stack .vl,.section--darker .stack .vl{color:var(--on-dark)}
+.stack .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:1.1rem;padding-top:1.1rem;
+  border-top:2px solid var(--line-l-2)}
+.section--dark .stack .total,.section--darker .stack .total{border-color:var(--line-d-2)}
+.stack .total .tl{font-family:var(--display);font-style:italic;font-size:clamp(1.1rem,1.8vw,1.5rem);color:var(--on-light)}
+.section--dark .stack .total .tl,.section--darker .stack .total .tl{color:var(--on-dark)}
+.stack .total .tv{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.8rem);
+  background:var(--balayage-h);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+
+/* ============================================================
+   Precio
+   ============================================================ */
+.price-ladder{list-style:none;display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;margin-bottom:clamp(1.4rem,3vh,2.2rem)}
+.price-ladder li{font-family:var(--display);font-size:clamp(1.2rem,2.4vw,2rem);color:var(--on-dark-mute);
+  position:relative;opacity:.7}
+.price-ladder li::after{content:"";position:absolute;left:-4%;right:-4%;top:54%;height:2px;background:var(--rojo);
+  transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease) var(--d,0s)}
+.in .price-ladder li::after{transform:scaleX(1)}
+.price-hero{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.price-hero .lbl{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2vw,1.7rem);color:var(--gold-lt)}
+.price-hero .num{font-family:var(--display);font-weight:700;font-size:clamp(4rem,12vw,9rem);line-height:.9;
+  background:var(--balayage-h);-webkit-background-clip:text;background-clip:text;color:transparent;
+  font-variant-numeric:tabular-nums}
+.price-note{font-size:clamp(.95rem,1.4vw,1.18rem);line-height:1.6;max-width:54ch;color:var(--on-dark-soft);margin-bottom:clamp(1.6rem,3vh,2.2rem)}
+
+/* tarjeta-oferta */
+.offer-box{position:relative;border-radius:24px;padding:clamp(1.8rem,3.4vw,3rem);
+  background:linear-gradient(160deg,rgba(185,128,80,.14),rgba(21,18,17,.6));
+  border:1px solid var(--line-d-2);box-shadow:0 40px 90px -50px rgba(185,128,80,.7);overflow:hidden}
+.offer-box .ob-glow{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(60% 50% at 50% 0%,rgba(216,177,136,.22),transparent 70%)}
+.offer-box>*{position:relative;z-index:1}
+
+/* ============================================================
+   Bonus / urgencia
+   ============================================================ */
+.bonus{display:flex;flex-direction:column;gap:clamp(1rem,2vh,1.5rem);margin-top:clamp(1.6rem,3vh,2.4rem);max-width:780px}
+.bonus .b{display:flex;gap:1.2rem;align-items:flex-start;padding:clamp(1.3rem,2vw,1.7rem);
+  border-radius:16px;border:1px solid var(--line-d);background:rgba(185,128,80,.05);
+  transition:transform .5s var(--spring),border-color .4s}
+.bonus .b:hover{transform:translateX(6px);border-color:var(--line-d-2)}
+.bonus .b svg{width:34px;height:34px;color:var(--gold-lt);flex:none}
+.bonus .b h4{font-family:var(--display);font-size:clamp(1.2rem,2vw,1.55rem);color:var(--on-dark);margin-bottom:.3em}
+.bonus .b p{font-size:.96rem;line-height:1.5;color:var(--on-dark-mute)}
+.bval{display:inline-block;margin-top:.5em;font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.04em;
+  color:var(--gold-lt);padding:.3em .8em;border-radius:999px;border:1px solid var(--line-d-2)}
+.urgency-tag{display:inline-flex;align-items:center;gap:.6em;font-family:var(--sans);font-weight:700;
+  font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rojo);
+  padding:.55em 1.1em;border-radius:999px;border:1px solid rgba(215,71,47,.4);background:rgba(215,71,47,.08);margin-bottom:1.4rem}
+.urgency-tag .dot{width:.55em;height:.55em;border-radius:50%;background:var(--rojo);animation:pulseDot 1.4s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+/* ============================================================
+   Garantía
+   ============================================================ */
+.guarantee{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center;
+  max-width:880px;margin:clamp(1.6rem,3vh,2.4rem) auto 0}
+.seal{position:relative;width:clamp(140px,20vw,200px);aspect-ratio:1;flex:none;margin:0 auto;
+  display:grid;place-content:center;text-align:center}
+.seal svg{position:absolute;inset:0;width:100%;height:100%;color:var(--gold);animation:spinSlow 26s linear infinite}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.seal .seal-num{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,5vw,3.6rem);line-height:.9;
+  color:var(--on-light)}
+.section--dark .seal .seal-num,.section--darker .seal .seal-num{color:var(--on-dark)}
+.seal .seal-lbl{font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:.3em}
+.guarantee h2{margin-bottom:.6rem}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{max-width:760px;margin:clamp(1.6rem,3vh,2.4rem) auto 0;display:flex;flex-direction:column;gap:.7rem}
+.faq details{border:1px solid var(--line-l);border-radius:14px;background:var(--blanco);overflow:hidden;
+  transition:border-color .3s,background .3s}
+.section--dark .faq details,.section--darker .faq details{border-color:var(--line-d);background:rgba(185,128,80,.04)}
+.faq details[open]{border-color:var(--line-l-2)}
+.section--dark .faq details[open],.section--darker .faq details[open]{border-color:var(--line-d-2)}
+.faq summary{list-style:none;cursor:pointer;padding:clamp(1.1rem,2vw,1.4rem) clamp(1.2rem,2.4vw,1.7rem);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:var(--display);font-size:clamp(1.05rem,1.7vw,1.32rem);color:var(--on-light)}
+.section--dark .faq summary,.section--darker .faq summary{color:var(--on-dark)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:24px;height:24px;position:relative;transition:transform .4s var(--spring)}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;background:var(--gold);border-radius:2px}
+.faq summary .pm::before{top:50%;left:2px;right:2px;height:2px;transform:translateY(-50%)}
+.faq summary .pm::after{left:50%;top:2px;bottom:2px;width:2px;transform:translateX(-50%);transition:transform .4s var(--spring)}
+.faq details[open] summary .pm{transform:rotate(180deg)}
+.faq details[open] summary .pm::after{transform:translateX(-50%) scaleY(0)}
+.faq .ans{padding:0 clamp(1.2rem,2.4vw,1.7rem);max-height:0;overflow:hidden;opacity:0;
+  transition:max-height .5s var(--ease),opacity .4s var(--ease),padding .4s}
+.faq details[open] .ans{max-height:420px;opacity:1;padding:0 clamp(1.2rem,2.4vw,1.7rem) clamp(1.2rem,2.2vw,1.5rem)}
+.faq .ans p{font-size:1rem;line-height:1.6;color:var(--on-light-soft)}
+.section--dark .faq .ans p,.section--darker .faq .ans p{color:var(--on-dark-soft)}
+
+/* ============================================================
+   Transform / cierre
+   ============================================================ */
+.transform{display:flex;flex-direction:column;gap:clamp(.7rem,1.8vh,1.1rem);max-width:520px;margin:clamp(1.4rem,3vh,2rem) auto;align-items:center}
+.transform .t{display:flex;align-items:center;gap:1.2rem;font-family:var(--display);font-size:clamp(1.4rem,2.8vw,2.2rem)}
+.transform .from{color:var(--on-dark-mute);text-decoration:line-through;text-decoration-color:rgba(215,71,47,.6)}
+.transform .arr{color:var(--gold)}
+.transform .to{color:transparent;background:var(--balayage-h);-webkit-background-clip:text;background-clip:text;font-weight:700}
+.closing-big{font-family:var(--display);font-weight:600;font-size:clamp(2.6rem,8vw,6.5rem);line-height:1;
+  color:var(--on-dark);margin-bottom:1rem}
+.closing-big em{color:var(--gold-lt)}
+
+/* ============================================================
+   Sticky CTA bar
+   ============================================================ */
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  padding:.8rem clamp(1rem,4vw,2.5rem);
+  background:rgba(13,12,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--line-d-2);
+  transform:translateY(120%);transition:transform .6s var(--spring)}
+.stickybar.show{transform:translateY(0)}
+.stickybar .sb-info{display:flex;flex-direction:column;line-height:1.15}
+.stickybar .sb-info .sb-name{font-family:var(--display);font-size:1.05rem;color:var(--marfil)}
+.stickybar .sb-info .sb-price{font-size:.82rem;color:var(--on-dark-mute)}
+.stickybar .sb-info .sb-price b{color:var(--gold-lt);font-size:1.05rem;font-family:var(--display)}
+.stickybar .cta{padding:.85em 1.7em;font-size:.98rem;animation:none}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer{background:var(--black);color:var(--on-dark-mute);padding:clamp(3rem,6vh,4.5rem) clamp(1.4rem,6vw,5rem) 6rem;
+  text-align:center;position:relative;z-index:2}
+.footer .fmark{font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);color:var(--marfil);letter-spacing:.06em;margin-bottom:.6rem}
+.footer .fmark b{color:var(--gold)}
+.footer .ftag{font-family:var(--serif);font-style:italic;color:var(--tan);margin-bottom:1.4rem}
+.footer .flinks{display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;font-size:.84rem;margin-bottom:1.4rem}
+.footer .flinks a{color:var(--on-dark-mute);transition:color .3s}
+.footer .flinks a:hover{color:var(--gold-lt)}
+.footer .fcopy{font-size:.76rem;opacity:.6;max-width:60ch;margin:0 auto;line-height:1.6}
+
+/* ============================================================
+   Progreso superior
+   ============================================================ */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:70;background:var(--balayage-h)}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media(max-width:900px){
+  .hero{min-height:auto;padding-top:clamp(5rem,12vh,7rem)}
+  .hero-grid{grid-template-columns:1fr;gap:clamp(1.8rem,5vw,2.6rem)}
+  .hero-portrait{max-width:440px;margin:0 auto;width:100%}
+  .scrolldown{display:none}
+  .trio,.fit,.gallery,.imagine{grid-template-columns:1fr}
+  .guarantee{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .guarantee .body,.guarantee .lead{margin-left:auto;margin-right:auto}
+  .guarantee .kicker{justify-content:center}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .section{padding:clamp(3.2rem,8vh,4.6rem) 1.25rem}
+  .hero-portrait{max-width:360px}
+  .hero-cta-row{flex-direction:column;align-items:stretch}
+  .hero-cta-row .cta{justify-content:center;width:100%}
+  .cta{padding:1.05em 1.6em;font-size:1rem}
+  .cta--lg{padding:1.1em 1.8em}
+  .cta-note{gap:.45em .9em;font-size:.78rem}
+  .stickybar{justify-content:center;padding:.7rem 1rem}
+  .stickybar .sb-info{display:none}
+  .stickybar .cta{width:100%;justify-content:center}
+  .price-hero{gap:.4rem 1rem}
+  .price-hero .num{font-size:clamp(3.4rem,20vw,5rem)}
+  .chart-bars{gap:.8rem}
+  .bar-item .bar-val{font-size:.9rem}
+  .bar-item.ref .bar-val{font-size:1.2rem}
+  .bar-col{width:clamp(46px,17vw,90px)}
+  .bar-lab{font-size:.7rem}
+  .pillar-head{gap:.7rem;flex-wrap:wrap}
+  .pillar-head .pnum{font-size:2.2rem}
+  .asks li{font-size:1.06rem}
+  .transform .t{gap:.7rem;font-size:1.35rem}
+  .stack .it{font-size:1rem}
+  /* triángulo: agrandar las etiquetas en móvil (unidades del propio SVG) */
+  .tri-l{font-size:46px}
+  .tri-s{font-size:30px}
+  .tri-c{font-size:70px}
+  .triwrap svg{overflow:visible}
+}
+@media(max-width:400px){
+  .tri-l{font-size:52px}
+  .tri-s{font-size:34px}
+  .tri-c{font-size:74px}
+}
+@media(max-width:420px){
+  .section{padding:2.7rem 1.05rem}
+  .hero .display{font-size:clamp(2.3rem,11vw,3rem)}
+  .headline{font-size:clamp(1.8rem,8.6vw,2.4rem)}
+  .closing-big{font-size:clamp(2.3rem,12vw,3.2rem)}
+  .wm{font-size:clamp(7rem,42vw,11rem)}
+  .wm--word{font-size:clamp(3.6rem,26vw,7rem)}
+  .price-hero .num{font-size:clamp(3rem,22vw,4.2rem)}
+  .seal{width:128px}
+}
+</style>
+</head>
+<body>
+
+<div class="fx fx-grain"></div>
+<div class="progress" id="progress"></div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="section section--darker hero">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm" aria-hidden="true">MP</span>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <svg class="hero-spark reveal" width="120" height="34" viewBox="0 0 120 34" fill="currentColor" aria-hidden="true">
+            <path class="twk" style="animation-delay:0s" d="M22 17 l2.4 6.4 6.4 2.4 -6.4 2.4 -2.4 6.4 -2.4 -6.4 -6.4 -2.4 6.4 -2.4z"/>
+            <path class="twk" style="animation-delay:.5s" d="M62 8 l1.7 4.6 4.6 1.7 -4.6 1.7 -1.7 4.6 -1.7 -4.6 -4.6 -1.7 4.6 -1.7z"/>
+            <path class="twk" style="animation-delay:1s" d="M100 18 l2 5.4 5.4 2 -5.4 2 -2 5.4 -2 -5.4 -5.4 -2 5.4 -2z"/>
+          </svg>
+          <div class="kicker reveal" style="--d:.05s"><span class="tick"></span>Mechas Premium · Edición de Lanzamiento</div>
+          <h1 class="display reveal lg" style="--d:.12s">
+            <span class="lh">De común</span>
+            <span class="lh">a <em>referencia</em>.</span>
+          </h1>
+          <p class="hero-sub reveal" style="--d:.22s">El método de <b>técnica, imagen y alcance</b> para que el mercado entero te busque a ti.</p>
+          <div class="hero-tags reveal" style="--d:.3s">
+            <span class="pill">Curso</span>
+            <span class="pill">Aplicación</span>
+            <span class="pill">Mentoría</span>
+          </div>
+          <div class="hero-cta-row reveal" style="--d:.38s">
+            <a class="cta cta--lg" href="#oferta">Quiero ser la referencia <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="cta-ghost" href="#metodo">Ver cómo funciona</a>
+          </div>
+          <div class="cta-note reveal" style="--d:.46s">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>7 días de garantía</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18" stroke-linecap="round"/></svg>100% online</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acceso inmediato</span>
+          </div>
+        </div>
+        <div class="hero-portrait reveal-zoom" style="--d:.3s">
+          <div class="ph ph--portrait">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="ph-label">Foto principal — retrato de la mentora / resultado premium</div>
+            <div class="ph-ratio">Vertical · 4:5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scrolldown reveal" style="--d:.6s"><span>Desliza</span><span class="chev"></span></div>
+  </section>
+
+  <!-- ============ 02 · DOLOR / COSTE DE QUEDARTE IGUAL ============ -->
+  <section class="section section--dark">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">VERDAD</span>
+    <div class="wrap">
+      <div class="kicker reveal"><span class="tick"></span>Antes de la técnica, una verdad</div>
+      <h2 class="headline reveal lg">«Soy buena…<br>pero ¿por qué <em>no me ven</em>?»</h2>
+      <div class="body wide reveal" style="--d:.1s">
+        <p>Si alguna vez te lo dijiste, sigue leyendo. Porque quedarte donde estás no te mantiene igual: <span class="strong">te hace retroceder.</span></p>
+      </div>
+      <ul class="beats" style="margin-top:clamp(1.4rem,3vh,2.2rem)">
+        <li class="reveal" style="--d:.04s">Si hoy te falta una clienta, mañana te faltan <span class="hl">dos</span>.</li>
+        <li class="reveal" style="--d:.1s">Si hoy no sabes posicionarte, mañana compites por <span class="hl">precio</span>.</li>
+        <li class="reveal" style="--d:.16s">Si tu imagen no transmite valor, te confunden con las <span class="hl">peluquerías baratas</span>.</li>
+        <li class="reveal" style="--d:.22s">Si tu trabajo es bueno pero nadie lo ve, sigues <span class="hl">invisible</span>.</li>
+        <li class="reveal" style="--d:.28s">Y si hoy no te ven… mañana te habrán <span class="hl">olvidado</span>.</li>
+      </ul>
+      <div class="body wide reveal" style="--d:.34s;margin-top:clamp(1.4rem,3vh,2rem)">
+        <p>No es porque seas mala. Es porque <span class="strong">nadie te enseñó el camino correcto</span> — y tu talento se queda enterrado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · REFRAME: NO NECESITAS ESTUDIO ============ -->
+  <section class="section section--cream" id="metodo">
+    <span class="wm wm--word" aria-hidden="true">MITO</span>
+    <div class="wrap wrap--narrow center">
+      <div class="illu-top reveal"><svg class="illu draw" viewBox="0 0 120 90" aria-hidden="true">
+        <rect class="dp" style="--len:210" x="22" y="34" width="62" height="40" rx="6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle class="dp" style="--len:80" cx="53" cy="54" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <path class="dp" style="--len:70" d="M84 44 l18 -8 v36 l-18 -8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <line class="dp" style="--len:96;--dd:1.1s" x1="18" y1="80" x2="104" y2="28" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+      </svg></div>
+      <div class="kicker reveal"><span class="tick"></span>La mentira de la superproducción</div>
+      <h2 class="headline reveal lg">No necesitas un estudio.<br>Necesitas un <em>método</em>.</h2>
+      <div class="body wide reveal" style="--d:.12s">
+        <p>«¿Cómo voy a aparecer sin cámara profesional, sin estudio, sin nadie que edite?» Para. Quien te metió esa idea en la cabeza <span class="strong">te mintió.</span></p>
+        <p>Esa gurú llena de placas no graba, no escribe, no edita ni publica — tiene un equipo que lo hace todo. Mira el peso que se va de tus hombros: <span class="hl">no necesitas aparecer</span>, <span class="hl">no necesitas editar</span> y <span class="hl">no necesitas un solo seguidor</span> para empezar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · TESIS + DESEOS ============ -->
+  <section class="section section--dark">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">TODO</span>
+    <div class="wrap">
+      <div class="kicker reveal"><span class="tick"></span>Lo único que lo resuelve todo</div>
+      <h2 class="headline reveal lg">Todo cambia cuando te conviertes en <em>referencia</em>.</h2>
+      <ul class="asks">
+        <li class="reveal" style="--d:.04s"><span class="qm">¿</span><span>Quieres <b>más clientas</b>, sin rogar por una cita?</span></li>
+        <li class="reveal" style="--d:.1s"><span class="qm">¿</span><span>Quieres <b>cobrar premium</b>, sin miedo a perder clientas?</span></li>
+        <li class="reveal" style="--d:.16s"><span class="qm">¿</span><span>Quieres que las <b>marcas te busquen</b> y te paguen?</span></li>
+        <li class="reveal" style="--d:.22s"><span class="qm">¿</span><span>Quieres un <b>equipo</b>, gente buena queriendo trabajar contigo?</span></li>
+        <li class="reveal" style="--d:.28s"><span class="qm">¿</span><span>Quieres <b>facturar más de 100 mil € al mes</b>?</span></li>
+      </ul>
+      <div class="body wide reveal" style="--d:.34s;margin-top:clamp(1.4rem,3vh,2rem)">
+        <p>No se trata de hacer la mecha más bonita. Se trata de convertirte en <span class="strong">LA referencia</span> que todo el mercado busca. <span class="hl">Esa es la clave de todo.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · LOS NÚMEROS (gráficos) ============ -->
+  <section class="section section--light">
+    <span class="wm" aria-hidden="true">€</span>
+    <div class="wrap center">
+      <div class="kicker reveal"><span class="tick"></span>Los números no mienten</div>
+      <h2 class="headline reveal lg">La diferencia no es el talento.<br>Es el <em>posicionamiento</em>.</h2>
+      <div class="chart-bars reveal" style="--d:.1s">
+        <div class="bar-item"><span class="bar-val" data-count="2500" data-suffix=" €">0 €</span><div class="bar-col"><span class="bar-fill" style="--h:11%"></span></div><div class="bar-lab">Profesional<br>común</div></div>
+        <div class="bar-item"><span class="bar-val" data-count="6000" data-suffix=" €">0 €</span><div class="bar-col"><span class="bar-fill" style="--h:24%"></span></div><div class="bar-lab">Buena, pero<br>invisible</div></div>
+        <div class="bar-item ref"><span class="bar-val" data-count="100000" data-suffix=" €+">0 €</span><div class="bar-col"><span class="bar-fill" style="--h:100%"></span></div><div class="bar-lab">Una<br>referencia</div></div>
+      </div>
+      <p class="chart-cap reveal" style="--d:.2s">Potencial de facturación mensual. La técnica te mete en el juego. Convertirte en referencia <span class="hl">multiplica</span> lo que ganas — porque dejas de depender solo del salón.</p>
+
+      <div class="streams reveal" style="--d:.1s;margin-left:auto;margin-right:auto;text-align:left">
+        <div>
+          <div class="srtop"><span class="srname">Profesional común</span><span class="srcount">1 fuente</span></div>
+          <div class="bar-track"><div class="seg-wrap solo" style="--w:20%"><span class="seg"></span></div></div>
+        </div>
+        <div>
+          <div class="srtop"><span class="srname ref">Tú, la referencia</span><span class="srcount">6+ fuentes</span></div>
+          <div class="bar-track"><div class="seg-wrap multi" style="--w:100%"><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span></div></div>
+          <div class="legend"><span>Servicios en salón</span><span>Monetización en redes</span><span>Patrocinios y marcas</span><span>Afiliados</span><span>Productos digitales</span><span>Eventos y ferias</span></div>
+        </div>
+      </div>
+      <p class="chart-cap reveal" style="--d:.2s">Ser referencia no solo te hace cobrar más: te abre <span class="hl">fuentes de ingreso</span> que la profesional común ni siquiera ve.</p>
+    </div>
+  </section>
+
+  <!-- ============ 06 · MECANISMO: TRIÁNGULO + ECOSISTEMA ============ -->
+  <section class="section section--dark">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">MP</span>
+    <div class="wrap center">
+      <div class="kicker reveal"><span class="tick"></span>El mecanismo</div>
+      <h2 class="headline reveal lg">El Triángulo de la <em>Colorista de Élite</em>™</h2>
+      <div class="body reveal" style="--d:.1s;margin:0 auto"><p>El Método MP no es un curso. Son tres cosas trabajando juntas para acompañarte de todas las formas posibles:</p></div>
+
+      <div class="trio">
+        <div class="cell reveal" style="--d:.06s">
+          <svg class="draw illu" viewBox="0 0 48 48" aria-hidden="true"><path class="dp" style="--len:120" d="M24 8 L42 16 L24 24 L6 16 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path class="dp" style="--len:70;--dd:.7s" d="M12 19 v9 c0 4 24 4 24 0 v-9" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+          <h4>Curso</h4><p>La técnica y la estructura, paso a paso, en los tres pilares.</p>
+        </div>
+        <div class="cell reveal" style="--d:.14s">
+          <svg class="draw illu" viewBox="0 0 48 48" aria-hidden="true"><rect class="dp" style="--len:130" x="15" y="6" width="18" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><line class="dp" style="--len:10;--dd:.7s" x1="21" y1="37" x2="27" y2="37" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <h4>Aplicación</h4><p>El «Viral en 1 Minuto», para viralizar rápido y en cantidad.</p>
+        </div>
+        <div class="cell reveal" style="--d:.22s">
+          <svg class="draw illu" viewBox="0 0 48 48" aria-hidden="true"><rect class="dp" style="--len:120" x="7" y="13" width="26" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path class="dp" style="--len:40;--dd:.7s" d="M33 19 l9 -5 v20 l-9 -5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <h4>Mentoría</h4><p>Acompañamiento en directo con quien se está convirtiendo en referencia ahora.</p>
+        </div>
+      </div>
+
+      <div class="triwrap reveal" style="--d:.1s">
+        <svg viewBox="-170 0 1340 760" role="img" aria-label="Triángulo de la Colorista de Élite">
+          <defs><linearGradient id="balgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7E4E32"/><stop offset="0.5" stop-color="#B98050"/><stop offset="1" stop-color="#EAD2B4"/></linearGradient></defs>
+          <path id="tripath" class="tri-stroke" d="M500 92 L900 640 L100 640 Z"/>
+          <circle class="tri-dot" cx="500" cy="92" r="9"/><circle class="tri-dot" cx="900" cy="640" r="9"/><circle class="tri-dot" cx="100" cy="640" r="9"/>
+          <circle class="tri-trav" r="8"><animateMotion dur="6s" repeatCount="indefinite" rotate="0"><mpath href="#tripath"/></animateMotion></circle>
+          <text class="tri-l" x="500" y="54" text-anchor="middle" font-size="30">1 · SER BUENA</text>
+          <text class="tri-s" x="500" y="82" text-anchor="middle" font-size="20">técnicamente</text>
+          <text class="tri-l" x="900" y="688" text-anchor="middle" font-size="30">2 · PARECER BUENA</text>
+          <text class="tri-s" x="900" y="714" text-anchor="middle" font-size="20">visualmente</text>
+          <text class="tri-l" x="100" y="688" text-anchor="middle" font-size="30">3 · MOSTRAR QUE VALES</text>
+          <text class="tri-s" x="100" y="714" text-anchor="middle" font-size="20">ante miles</text>
+          <text class="tri-c" x="500" y="420" text-anchor="middle" font-size="62">COLORISTA</text>
+          <text class="tri-c" x="500" y="488" text-anchor="middle" font-size="62">DE ÉLITE</text>
+        </svg>
+      </div>
+      <div class="body reveal" style="--d:.16s;max-width:60ch;margin:clamp(.6rem,2vh,1.4rem) auto 0"><p>Quien domina solo el pilar 1 se queda <span class="hl">buena e invisible</span>. Quien domina los tres se convierte en <span class="strong">referencia, autoridad, premium</span>.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ 07 · LA OFERTA · PILARES + ENTREGABLES ============ -->
+  <section class="section section--light" id="oferta">
+    <span class="wm wm--word" aria-hidden="true">OFERTA</span>
+    <div class="wrap">
+      <div class="center">
+        <div class="kicker reveal"><span class="tick"></span>La oferta · Todo lo que recibes</div>
+        <h2 class="headline reveal lg">Tres pilares.<br>Un ecosistema <em>completo</em>.</h2>
+        <div class="body reveal" style="--d:.1s;margin:0 auto"><p>Cada pieza tiene un valor real. Juntas, te llevan de invisible a referencia.</p></div>
+      </div>
+
+      <!-- PILAR 1 -->
+      <div class="pillar reveal" style="--d:.05s">
+        <div class="pillar-head">
+          <svg class="picon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="6" cy="7" r="2.4"/><circle cx="6" cy="17" r="2.4"/><line x1="8" y1="8.5" x2="20" y2="16" stroke-linecap="round"/><line x1="8" y1="15.5" x2="20" y2="8" stroke-linecap="round"/></svg>
+          <div><div class="pnum">01</div></div>
+          <div><div class="ptitle">Ser Buena</div><div class="psub">Técnicamente · La técnica</div></div>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="ctop"><span class="cname">Colorimetría Avanzada</span><span class="cval">297 €</span></div><p class="cdesc">Para acertar el tono siempre, sin sustos.</p></div>
+          <div class="card"><div class="ctop"><span class="cname">Balayage · Mezcla de Tonos</span><span class="cval">397 €</span></div><p class="cdesc">El efecto que piden las clientas que más pagan.</p></div>
+          <div class="card"><div class="ctop"><span class="cname">Mechas con Gorro</span><span class="cval">197 €</span></div><p class="cdesc">La técnica brasileña que revoluciona España: rápida y rentable.</p></div>
+          <div class="card"><div class="ctop"><span class="cname">Visagismo en la Mecha</span><span class="cval">197 €</span></div><p class="cdesc">El resultado perfecto para cada rostro — tu criterio brillando.</p></div>
+        </div>
+      </div>
+
+      <!-- PILAR 2 -->
+      <div class="pillar reveal" style="--d:.05s">
+        <div class="pillar-head">
+          <svg class="picon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 12 s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <div><div class="pnum">02</div></div>
+          <div><div class="ptitle">Parecer Buena</div><div class="psub">Visualmente · La imagen</div></div>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="ctop"><span class="cname">Imagen Profesional Premium</span><span class="cval">297 €</span></div><p class="cdesc">Tu imagen, tu salón y tu presencia trabajando a tu favor.</p></div>
+          <div class="card"><div class="ctop"><span class="cname">Redes y Posicionamiento</span><span class="cval">297 €</span></div><p class="cdesc">Para que el mercado perciba tu valor antes de conocerte.</p></div>
+        </div>
+        <div class="body reveal" style="--d:.1s;margin-top:1.2rem;max-width:50ch"><p>Tu clienta decide si confía en ti <span class="strong">antes</span> de ver tu trabajo. Decide por tu imagen.</p></div>
+      </div>
+
+      <!-- PILAR 3 -->
+      <div class="pillar reveal" style="--d:.05s">
+        <div class="pillar-head">
+          <svg class="picon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M7 7 a7 7 0 0 0 0 10 M17 7 a7 7 0 0 1 0 10"/><path d="M3.5 4 a11 11 0 0 0 0 16 M20.5 4 a11 11 0 0 1 0 16"/></svg>
+          <div><div class="pnum">03</div></div>
+          <div><div class="ptitle">Demostrar que Vales</div><div class="psub">Ante millones · El alcance</div></div>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="ctop"><span class="cname">Crea tu Curso Rentable</span><span class="cval">297 €</span></div><p class="cdesc">Una segunda fuente de ingresos enseñando lo que ya sabes.</p></div>
+          <div class="card star"><div class="ctop"><span class="cname">App «Viral en 1 Minuto»</span><span class="cval">979 €/año</span></div><p class="cdesc">La herramienta que lo hace todo rápido — aunque «no sepas de redes».</p></div>
+          <div class="card"><div class="ctop"><span class="cname">Bonus · Inmersión Ahora Mentora</span><span class="cval">497 €</span></div><p class="cdesc">Formación en directo conmigo y mi equipo de marketing.</p></div>
+        </div>
+      </div>
+
+      <div class="center reveal" style="--d:.1s;margin-top:clamp(2rem,4vh,3rem)">
+        <a class="cta cta--lg" href="#precio">Ver el precio de hoy <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 · APP SPOTLIGHT + 10 HERRAMIENTAS ============ -->
+  <section class="section section--dark">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">APP</span>
+    <div class="wrap">
+      <div class="hero-grid" style="align-items:center">
+        <div>
+          <div class="kicker reveal"><span class="tick"></span>Viral en 1 Minuto · El corazón del pilar 3</div>
+          <h2 class="headline reveal lg">La estrategia de los grandes.<br>Ahora en <em>tu</em> mano.</h2>
+          <div class="body reveal" style="--d:.1s">
+            <p>Existe un <span class="hl">feed de prueba</span> en Instagram que entrega tu contenido a quien no te conoce. Ahí es donde se viraliza — y casi nadie sabe que existe.</p>
+            <p>Una alumna, con un solo vídeo de menos de un minuto, ganó <span class="strong">+50.000 seguidores</span>. La app te da el formato validado y las herramientas para producir mucho, bueno y rápido.</p>
+          </div>
+        </div>
+        <div class="hero-portrait reveal-zoom" style="--d:.2s">
+          <div class="ph ph--portrait">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="10" y1="18" x2="14" y2="18" stroke-linecap="round"/></svg>
+            <div class="ph-label">Mockup de la app «Viral en 1 Minuto» (pantallas)</div>
+            <div class="ph-ratio">Vertical · 4:5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center reveal" style="margin-top:clamp(2.4rem,5vh,3.6rem)">
+        <div class="kicker" style="justify-content:center"><span class="tick"></span>Las 10 herramientas de la app</div>
+      </div>
+      <div class="feat">
+        <div class="f reveal" style="--d:.03s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg><h4>Modelado de guiones</h4></div><p>Pega el enlace de un vídeo y genera un guion <span class="hl">nuevo y original</span>, con tu estilo. Nunca una copia.</p></div>
+        <div class="f reveal" style="--d:.06s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="8" width="14" height="11" rx="2.5"/><circle cx="9.5" cy="13.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="13.5" r="1.2" fill="currentColor" stroke="none"/><line x1="12" y1="4" x2="12" y2="8" stroke-linecap="round"/></svg><h4>+20 agentes de IA</h4></div><p>Cada uno entrenado en un tipo de contenido de belleza. Formato + nicho + tema = guion en menos de un minuto.</p></div>
+        <div class="f reveal" style="--d:.09s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="15" rx="2.5"/><line x1="4" y1="9" x2="20" y2="9"/><path d="M12 11.5 l.9 1.9 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2L9.1 13.7l2-.3z" fill="currentColor" stroke="none"/></svg><h4>Guion viral del día</h4></div><p>Para no bloquearte nunca con el «¿qué publico hoy?». Cada día, un guion con referencia visual.</p></div>
+        <div class="f reveal" style="--d:.03s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="14" height="11" rx="2.5"/><circle cx="10" cy="12.5" r="3"/><path d="M17 10 l4-2v9l-4-2" stroke-linejoin="round"/></svg><h4>Cámara + Teleprompter</h4></div><p>«No sé grabar.» Cámara con teleprompter y funciones que ni el iPhone tiene.</p></div>
+        <div class="f reveal" style="--d:.06s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 4z"/><path d="M12 9.2c-1-1.5-3.3-.6-3.3 1.1 0 1.3 1.7 2.5 3.3 3.6 1.6-1.1 3.3-2.3 3.3-3.6 0-1.7-2.3-2.6-3.3-1.1z" fill="currentColor" stroke="none"/></svg><h4>Asistente gamificado</h4></div><p>«¿Y si se me olvida?» Una mascota que te recuerda y te manda el guion a tu WhatsApp.</p></div>
+        <div class="f reveal" style="--d:.09s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="5" height="16" rx="1.4"/><rect x="9.5" y="4" width="5" height="11" rx="1.4"/><rect x="16" y="4" width="5" height="13" rx="1.4"/></svg><h4>Tablero de producción</h4></div><p>Organiza los guiones, marca lo que grabaste y editaste, y guarda las métricas en un solo sitio.</p></div>
+        <div class="f reveal" style="--d:.03s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="20" x2="20" y2="20"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="8" width="3" height="10"/><rect x="16" y="5" width="3" height="13"/></svg><h4>Análisis de métricas</h4></div><p>Sube la captura y la app te dice qué trajo más alcance y clientas. Todo en la biblioteca.</p></div>
+        <div class="f reveal" style="--d:.06s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 4 L22 9 L12 14 L2 9 Z"/><path d="M6 11 v4 c0 2 12 2 12 0 v-4"/></svg><h4>Parte educativa</h4></div><p>12 módulos por formato, paso a paso, para que domines cada tipo de contenido.</p></div>
+        <div class="f reveal" style="--d:.09s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M7 7 a7 7 0 0 0 0 10 M17 7 a7 7 0 0 1 0 10"/></svg><h4>Mentoría en directo</h4></div><p>De lunes a viernes, taller en directo con <span class="hl">Alicia y Taylor</span>.</p></div>
+        <div class="f reveal" style="--d:.03s"><div class="fn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.3"/><path d="M4 19 c0-3 2.6-5 5-5 s5 2 5 5"/><path d="M14.6 19 c0-2 1.7-3.6 3.6-3.6 s3.3 1.6 3.3 3.6"/></svg><h4>Red social interna</h4></div><p>Comunidad donde las alumnas publican resultados y las mentoras responden.</p></div>
+      </div>
+      <div class="body reveal center" style="--d:.1s;text-align:center;max-width:54ch;margin:clamp(1.6rem,3vh,2.4rem) auto 0"><p><span class="hl-grad">No es una app. Es un ecosistema dentro del ecosistema.</span></p></div>
+    </div>
+  </section>
+
+  <!-- ============ 09 · IMAGINA EL RESULTADO ============ -->
+  <section class="section section--darker">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">TÚ</span>
+    <div class="wrap center">
+      <div class="kicker reveal"><span class="tick"></span>Imagina el resultado</div>
+      <h2 class="headline reveal lg">Cierra los ojos.<br>Esto es <em>tuyo</em>.</h2>
+      <ul class="imagine" style="margin-left:auto;margin-right:auto;text-align:left">
+        <li class="reveal" style="--d:.04s">Tu agenda <span class="hl">llena</span>.</li>
+        <li class="reveal" style="--d:.08s">Clientas premium pagando lo que mereces.</li>
+        <li class="reveal" style="--d:.12s">Tu salón con estética profesional.</li>
+        <li class="reveal" style="--d:.16s">Tu Instagram bonito y <span class="hl">viralizando</span>.</li>
+        <li class="reveal" style="--d:.2s">«Solo tú sabes hacer mi mecha».</li>
+        <li class="reveal" style="--d:.24s">Marcas invitándote.</li>
+        <li class="reveal" style="--d:.28s">Tu nombre, <span class="hl">la referencia</span> de tu ciudad.</li>
+        <li class="reveal" style="--d:.32s">Tus ingresos multiplicándose.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 10 · GALERÍA + TESTIMONIOS ============ -->
+  <section class="section section--light">
+    <span class="wm wm--word" aria-hidden="true">ESCENA</span>
+    <div class="wrap center">
+      <div class="kicker reveal"><span class="tick"></span>Tu trabajo merece un escenario</div>
+      <h2 class="headline reveal lg">Eres buena. Ahora <em>demuéstralo</em>.</h2>
+
+      <!-- GALERÍA: sustituir por fotos reales -->
+      <div class="gallery">
+        <figure class="reveal" style="--d:.05s"><div class="ph ph--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ph-label">Tu imagen</div><div class="ph-ratio">Vertical · 4:5</div></div><figcaption>Tu imagen</figcaption></figure>
+        <figure class="reveal" style="--d:.12s"><div class="ph ph--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ph-label">Tus resultados (antes / después)</div><div class="ph-ratio">Vertical · 4:5</div></div><figcaption>Tus resultados</figcaption></figure>
+        <figure class="reveal" style="--d:.19s"><div class="ph ph--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5L5 21" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="ph-label">Tu marca</div><div class="ph-ratio">Vertical · 4:5</div></div><figcaption>Tu marca</figcaption></figure>
+      </div>
+      <p class="chart-cap reveal" style="--d:.1s">El método te da la estructura para convertir cada resultado en contenido que <span class="hl">atrae clientas</span> y construye tu autoridad.</p>
+
+      <!-- TESTIMONIOS: estructura lista — pega aquí los reales (texto + foto) -->
+      <div style="margin-top:clamp(2.4rem,5vh,3.6rem)" class="reveal">
+        <div class="kicker" style="justify-content:center"><span class="tick"></span>Lo que dicen las que ya entraron</div>
+      </div>
+      <div class="testi">
+        <div class="t reveal" style="--d:.05s"><div class="stars">★★★★★</div><p class="quote">«[Pega aquí el testimonio real de tu alumna — resultado concreto, en sus palabras.]»</p><div class="who"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="nm">Nombre de la alumna</div><div class="role">Colorista · Ciudad</div></div></div></div>
+        <div class="t reveal" style="--d:.12s"><div class="stars">★★★★★</div><p class="quote">«[Pega aquí otro testimonio real — antes y después de entrar al método.]»</p><div class="who"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="nm">Nombre de la alumna</div><div class="role">Colorista · Ciudad</div></div></div></div>
+        <div class="t reveal" style="--d:.19s"><div class="stars">★★★★★</div><p class="quote">«[Tercer testimonio real — números, agenda llena, marcas, etc.]»</p><div class="who"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></div><div><div class="nm">Nombre de la alumna</div><div class="role">Colorista · Ciudad</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 · ¿ES PARA TI? ============ -->
+  <section class="section section--dark">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">¿TÚ?</span>
+    <div class="wrap center">
+      <div class="kicker reveal"><span class="tick"></span>¿Es para ti?</div>
+      <h2 class="headline reveal lg">Voy a ser <em>honesta</em> contigo.</h2>
+      <div class="fit" style="text-align:left">
+        <div class="fit-col yes reveal" style="--d:.06s">
+          <div class="fit-h"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="13"/><path d="M10 16.5 l4 4 8-9"/></svg>Es para ti si…</div>
+          <ul>
+            <li>Eres buena (o quieres serlo) pero <b>nadie te ve</b>.</li>
+            <li>Estás cansada de <b>competir por precio</b>.</li>
+            <li>Quieres <b>llenar tu agenda</b> con clientas premium.</li>
+            <li>Sueñas con <b>una marca</b>, no solo un puesto en un salón.</li>
+          </ul>
+        </div>
+        <div class="fit-col no reveal" style="--d:.14s">
+          <div class="fit-h"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="16" cy="16" r="13"/><path d="M11 11 l10 10 M21 11 l-10 10"/></svg>No es para ti si…</div>
+          <ul>
+            <li>Buscas magia <b>sin mover un dedo</b>.</li>
+            <li>Crees que tu talento basta <b>sin mostrarlo</b>.</li>
+            <li>No grabarías <b>ni un minuto</b> (aunque la app te lo deja fácil).</li>
+            <li>Te conformas con seguir <b>invisible</b>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="body reveal center" style="--d:.1s;text-align:center;margin:clamp(1.6rem,3vh,2.2rem) auto 0"><p>Si te has visto en la columna de la izquierda… <span class="hl">este es tu momento.</span></p></div>
+    </div>
+  </section>
+
+  <!-- ============ 12 · VALOR / STACK ============ -->
+  <section class="section section--cream">
+    <span class="wm wm--word" aria-hidden="true">VALOR</span>
+    <div class="wrap center">
+      <div class="kicker reveal"><span class="tick"></span>El valor real</div>
+      <h2 class="headline reveal lg">Suma todo lo que recibes.</h2>
+      <div class="stack reveal" style="--d:.08s">
+        <div class="row"><span class="it">Colorimetría Avanzada</span><span class="vl">297 €</span></div>
+        <div class="row"><span class="it">Balayage · Mezcla de Tonos</span><span class="vl">397 €</span></div>
+        <div class="row"><span class="it">Mechas con Gorro</span><span class="vl">197 €</span></div>
+        <div class="row"><span class="it">Visagismo en la Mecha</span><span class="vl">197 €</span></div>
+        <div class="row"><span class="it">Imagen Profesional Premium</span><span class="vl">297 €</span></div>
+        <div class="row"><span class="it">Redes y Posicionamiento</span><span class="vl">297 €</span></div>
+        <div class="row"><span class="it">Crea tu Curso Rentable</span><span class="vl">297 €</span></div>
+        <div class="row"><span class="it app">App «Viral en 1 Minuto»<small>1 año de acceso</small></span><span class="vl">979 €</span></div>
+        <div class="row"><span class="it">Bonus · Inmersión Ahora Mentora</span><span class="vl">497 €</span></div>
+        <div class="total"><span class="tl">Valor real</span><span class="tv" data-count="3455" data-suffix=" €">0 €</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 13 · PRECIO ============ -->
+  <section class="section section--dark" id="precio">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm" aria-hidden="true">297</span>
+    <div class="wrap">
+      <div class="hero-grid" style="align-items:center">
+        <div>
+          <div class="kicker reveal"><span class="tick"></span>El precio de hoy</div>
+          <ul class="price-ladder reveal" style="--d:.06s">
+            <li>3.455 €</li><li>1.500 €</li><li>979 €</li><li>497 €</li>
+          </ul>
+          <div class="price-hero reveal" style="--d:.14s"><span class="lbl">Hoy</span><span class="num" data-count="297" data-suffix=" €">0 €</span></div>
+          <p class="price-note reveal" style="--d:.2s">Menos que un año de la app por sí sola. Menos que un solo servicio de colorimetría premium que aprenderás a cobrar. <span class="hl">Cuando esta edición se cierre, este precio no vuelve.</span></p>
+        </div>
+        <div class="offer-box reveal-zoom" style="--d:.16s">
+          <div class="ob-glow"></div>
+          <div class="kicker" style="margin-bottom:1rem"><span class="tick"></span>Método MP · Mechas Premium</div>
+          <div style="display:flex;align-items:baseline;gap:.8rem;margin-bottom:.3rem">
+            <span class="charm" style="font-size:1.2rem;color:var(--on-dark-mute);text-decoration:line-through">3.455 €</span>
+            <span class="hl" style="font-size:.8rem;letter-spacing:.16em;text-transform:uppercase">−91%</span>
+          </div>
+          <div style="font-family:var(--display);font-weight:700;font-size:clamp(3rem,8vw,4.6rem);line-height:.95;background:var(--balayage-h);-webkit-background-clip:text;background-clip:text;color:transparent">297 €</div>
+          <p style="color:var(--on-dark-mute);font-size:.92rem;margin:.4rem 0 1.4rem">Pago único · sin plazos</p>
+          <a class="cta cta--lg" style="width:100%;justify-content:center" href="https://pay.hotmart.com/L106516537L?off=4rjrd5gl&amp;checkoutMode=10" target="_blank" rel="noopener">Quiero entrar al Método MP <span class="arrow" aria-hidden="true">→</span></a>
+          <div class="cta-note" style="justify-content:center;margin-top:1.1rem">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>7 días de garantía</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18" stroke-linecap="round"/></svg>100% online</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acceso inmediato</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 14 · BONUS / URGENCIA ============ -->
+  <section class="section section--darker">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">BONUS</span>
+    <div class="wrap">
+      <div class="reveal"><span class="urgency-tag"><span class="dot"></span>Esta edición se cierra</span></div>
+      <h2 class="headline reveal lg" style="--d:.04s">Quien entra ahora, entra con <em>ventaja</em>.</h2>
+      <div class="body wide reveal" style="--d:.1s"><p>Esto no se va a repetir. Además de todo el método, te llevas:</p></div>
+      <div class="bonus">
+        <div class="b reveal" style="--d:.05s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M4 9 h16 M12 9 v11" stroke-linecap="round"/><path d="M12 9 C12 5 8 5 8 7.5 S12 9 12 9 C12 5 16 5 16 7.5 S12 9 12 9" stroke-linecap="round"/></svg>
+          <div><h4>Inmersión Ahora Mentora</h4><p>Contenido, redes, posicionamiento, fotografía y edición, en directo conmigo y mi equipo. <span class="bval">Valor: 497 €</span></p></div>
+        </div>
+        <div class="b reveal" style="--d:.11s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 l2.6 5.6 6 .7-4.4 4.1 1.2 5.9L12 16.9 6.6 19.3l1.2-5.9L3.4 9.3l6-.7z" stroke-linejoin="round"/></svg>
+          <div><h4>Entre las 300 primeras</h4><p>Sorteo de una plaza gratuita en una formación presencial conmigo en Barcelona. <span class="bval">Valor: 2.000 €</span></p></div>
+        </div>
+        <div class="b reveal" style="--d:.17s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 l2.6 5.6 6 .7-4.4 4.1 1.2 5.9L12 16.9 6.6 19.3l1.2-5.9L3.4 9.3l6-.7z" stroke-linejoin="round"/></svg>
+          <div><h4>Entre las 500 primeras</h4><p>Sorteo de un día entero conmigo en el salón: mis procesos, el detrás de cámaras. <span class="bval">Valor: 1.000 €</span></p></div>
+        </div>
+      </div>
+      <div class="center reveal" style="--d:.1s;margin-top:clamp(2rem,4vh,3rem)">
+        <a class="cta cta--lg" href="https://pay.hotmart.com/L106516537L?off=4rjrd5gl&amp;checkoutMode=10" target="_blank" rel="noopener">Entrar con ventaja <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 15 · GARANTÍA ============ -->
+  <section class="section section--light">
+    <span class="wm" aria-hidden="true">0€</span>
+    <div class="wrap guarantee">
+      <div class="seal reveal-zoom">
+        <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 6"/>
+          <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="2"/>
+          <path id="sealpath" d="M100 100 m-62 0 a62 62 0 1 1 124 0 a62 62 0 1 1 -124 0" fill="none"/>
+          <text font-family="Open Sauce Sans, sans-serif" font-size="11" letter-spacing="3" fill="currentColor"><textPath href="#sealpath" startOffset="0">· GARANTÍA INCONDICIONAL · MÉTODO MP · GARANTÍA INCONDICIONAL ·</textPath></text>
+        </svg>
+        <div><div class="seal-num">7</div><div class="seal-lbl">Días</div></div>
+      </div>
+      <div>
+        <div class="kicker reveal"><span class="tick"></span>Riesgo cero</div>
+        <h2 class="headline h-lg reveal lg" style="--d:.06s">Pruébalo <em>sin riesgo</em> durante 7 días.</h2>
+        <div class="body wide reveal" style="--d:.12s">
+          <p>Entra, mira todo por dentro y empieza a aplicar. Si en <span class="strong">7 días</span> sientes que no es para ti, escribes y te devolvemos el <span class="hl">100% de tu dinero</span>. Sin preguntas, sin letra pequeña.</p>
+          <p>El riesgo lo asumo yo. Tú solo decides empezar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 16 · FAQ ============ -->
+  <section class="section section--cream" id="faq">
+    <span class="wm wm--word" aria-hidden="true">FAQ</span>
+    <div class="wrap wrap--narrow center">
+      <div class="kicker reveal"><span class="tick"></span>Antes de decidir</div>
+      <h2 class="headline reveal lg">Preguntas frecuentes.</h2>
+      <div class="faq" style="text-align:left">
+        <details class="reveal" style="--d:.04s"><summary>¿El curso es 100% online?<span class="pm"></span></summary><div class="ans"><p>Sí. Todo es 100% online y el acceso es inmediato después de la compra. Aprendes a tu ritmo, desde donde estés.</p></div></details>
+        <details class="reveal" style="--d:.07s"><summary>¿Puedo pagar a plazos?<span class="pm"></span></summary><div class="ans"><p>No: es un <strong>pago único de 297 €</strong>. Un solo pago y tienes acceso a todo el método.</p></div></details>
+        <details class="reveal" style="--d:.1s"><summary>¿Necesito aparecer o tener seguidores?<span class="pm"></span></summary><div class="ans"><p>No. No necesitas aparecer, ni editar, ni tener un solo seguidor para empezar. La app te da los guiones, el teleprompter y las herramientas para producir rápido aunque «no sepas de redes».</p></div></details>
+        <details class="reveal" style="--d:.13s"><summary>¿Por cuánto tiempo tengo acceso?<span class="pm"></span></summary><div class="ans"><p>El acceso al método es inmediato y la app «Viral en 1 Minuto» incluye <strong>1 año de acceso</strong>, con sus actualizaciones y mentorías en directo de lunes a viernes.</p></div></details>
+        <details class="reveal" style="--d:.16s"><summary>¿Para quién es el Método MP?<span class="pm"></span></summary><div class="ans"><p>Para coloristas y peluqueras que ya son buenas (o quieren serlo) pero siguen invisibles, cansadas de competir por precio, y que quieren convertirse en la referencia de su ciudad.</p></div></details>
+        <details class="reveal" style="--d:.19s"><summary>¿Y si no es para mí?<span class="pm"></span></summary><div class="ans"><p>Tienes <strong>7 días de garantía incondicional</strong>. Si sientes que no es para ti, te devolvemos el 100% de tu dinero, sin preguntas.</p></div></details>
+        <details class="reveal" style="--d:.22s"><summary>¿Cómo recibo el acceso?<span class="pm"></span></summary><div class="ans"><p>El pago se procesa de forma segura por Hotmart. En cuanto se confirma, recibes el acceso a la plataforma con todo el contenido y la app.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 17 · CIERRE ============ -->
+  <section class="section section--darker">
+    <div class="dust" data-dust></div>
+    <div class="vig"></div>
+    <span class="wm wm--word" aria-hidden="true">HOY</span>
+    <div class="wrap center">
+      <div class="illu-top reveal" style="text-align:center"><svg class="illu draw" viewBox="0 0 120 100" width="84" aria-hidden="true">
+        <path class="dp" style="--len:230" d="M60 50 C30 10,6 30,18 54 C8 76,36 90,60 60 Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <path class="dp" style="--len:230;--dd:.5s" d="M60 50 C90 10,114 30,102 54 C112 76,84 90,60 60 Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <line class="dp" style="--len:30;--dd:.9s" x1="60" y1="42" x2="60" y2="70" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg></div>
+      <div class="transform">
+        <div class="t reveal" style="--d:.04s"><span class="from">Invisible</span><span class="arr">→</span><span class="to">Vista</span></div>
+        <div class="t reveal" style="--d:.1s"><span class="from">Común</span><span class="arr">→</span><span class="to">Premium</span></div>
+        <div class="t reveal" style="--d:.16s"><span class="from">Olvidada</span><span class="arr">→</span><span class="to">Referencia</span></div>
+      </div>
+      <h2 class="closing-big reveal lg" style="--d:.1s">Tu nueva vida<br>empieza <em>hoy</em>.</h2>
+      <p class="lead reveal center" style="--d:.16s;margin:0 auto clamp(1.8rem,3.4vh,2.6rem)">Curso, aplicación y mentoría. El camino para convertirte en referencia. Todo, por <span class="hl">297 €</span>.</p>
+      <div class="reveal" style="--d:.22s">
+        <a class="cta cta--lg" href="https://pay.hotmart.com/L106516537L?off=4rjrd5gl&amp;checkoutMode=10" target="_blank" rel="noopener">Quiero entrar en el Método MP <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="cta-note reveal" style="--d:.28s;justify-content:center;margin-top:1.2rem">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pago único de 297 €</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>7 días de garantía</span>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- ============ STICKY CTA ============ -->
+<div class="stickybar" id="stickybar">
+  <div class="sb-info">
+    <span class="sb-name">Método MP · Mechas Premium</span>
+    <span class="sb-price">Hoy <b>297 €</b> · pago único · 7 días de garantía</span>
+  </div>
+  <a class="cta" href="https://pay.hotmart.com/L106516537L?off=4rjrd5gl&amp;checkoutMode=10" target="_blank" rel="noopener">Quiero entrar <span class="arrow" aria-hidden="true">→</span></a>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="fmark">MÉTODO <b>MP</b> · MECHAS PREMIUM</div>
+  <p class="ftag">De una profesional común a una gran referencia del mercado.</p>
+  <div class="flinks">
+    <a href="#oferta">La oferta</a>
+    <a href="#precio">Precio</a>
+    <a href="#faq">Preguntas</a>
+    <a href="https://pay.hotmart.com/L106516537L?off=4rjrd5gl&amp;checkoutMode=10" target="_blank" rel="noopener">Entrar ahora</a>
+  </div>
+  <p class="fcopy">© Método MP · Mechas Premium. Todos los derechos reservados. Este producto no garantiza la obtención de resultados. Cualquier referencia a ingresos o rendimiento es ilustrativa y depende del esfuerzo y la dedicación de cada profesional. Procesado de forma segura por Hotmart.</p>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* ---- Transiciones onduladas entre secciones de distinto "mundo" (oscuro ↔ claro) ----
+     Se inserta un divisor con una onda cuyo color superior = fondo de la sección de
+     arriba y color inferior = fondo de la de abajo. Así no hay cortes secos. */
+  (function(){
+    function isLight(s){ return s.classList.contains('section--light') || s.classList.contains('section--cream'); }
+    function topColor(s){
+      if(s.classList.contains('section--light')) return '#FFF6E5';
+      if(s.classList.contains('section--cream')) return '#E9E0D4';
+      if(s.classList.contains('section--darker')) return '#0D0C0D';
+      return '#151211';
+    }
+    function botColor(s){
+      if(s.classList.contains('section--light')) return '#FFF6E5';
+      if(s.classList.contains('section--cream')) return '#E9E0D4';
+      return '#151211';
+    }
+    // onda periódica (período 1440), dibujada en 2 períodos (0..2880) para
+    // poder desplazarla infinitamente (scroll horizontal) sin cortes visibles.
+    var wave = 'M0,0 H2880 V46 C2700,74 2340,74 2160,46 C1980,18 1620,18 1440,46 C1260,74 900,74 720,46 C540,18 180,18 0,46 Z';
+    var secs = [].slice.call(document.querySelectorAll('main > .section'));
+    var k = 0;
+    for(var i=1;i<secs.length;i++){
+      var prev = secs[i-1], cur = secs[i];
+      if(isLight(prev) === isLight(cur)) continue;          // solo en cruces oscuro↔claro
+      var dur = 9 + (k % 3) * 2.5;                          // velocidades variadas → movimiento orgánico
+      var anim = reduce ? '' :
+        '<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-1440 0" dur="' + dur + 's" repeatCount="indefinite"/>';
+      var div = document.createElement('div');
+      div.className = 'sdivider';
+      div.style.background = topColor(cur);                 // color de la sección de abajo
+      div.innerHTML = '<svg viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">'
+        + '<g><path d="' + wave + '" fill="' + botColor(prev) + '"></path>' + anim + '</g></svg>'; // onda con color de arriba, en movimiento
+      cur.parentNode.insertBefore(div, cur);
+      k++;
+    }
+  })();
+
+  /* ---- Reveal on scroll ----
+     Dos observers: secciones (umbral 0 → robusto incluso en secciones muy
+     altas en móvil) y elementos reveal individuales (aparecen al entrar). */
+  var ioSection = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        if(!e.target._c){ e.target._c = true;
+          e.target.querySelectorAll('[data-count]').forEach(countUp);
+        }
+        ioSection.unobserve(e.target);
+      }
+    });
+  },{threshold:0, rootMargin:'0px 0px -12% 0px'});
+  document.querySelectorAll('.section').forEach(function(el){ ioSection.observe(el); });
+
+  var ioReveal = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); ioReveal.unobserve(e.target); }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal, .reveal-zoom').forEach(function(el){ ioReveal.observe(el); });
+
+  /* Revelado inmediato de lo que YA está en pantalla al cargar.
+     No dependemos solo del IntersectionObserver para la primera vista:
+     así el hero nunca aparece en blanco aunque el observer tarde. */
+  function revealInView(){
+    var vh = window.innerHeight;
+    document.querySelectorAll('.section:not(.in)').forEach(function(s){
+      var r = s.getBoundingClientRect();
+      if(r.top < vh*0.92 && r.bottom > 0){
+        s.classList.add('in');
+        if(!s._c){ s._c = true; s.querySelectorAll('[data-count]').forEach(countUp); }
+      }
+    });
+    document.querySelectorAll('.reveal:not(.in),.reveal-zoom:not(.in)').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top < vh*0.96 && r.bottom > 0) el.classList.add('in');
+    });
+  }
+  /* doble rAF: pinta el estado inicial (opacity 0) y luego dispara la animación */
+  requestAnimationFrame(function(){ requestAnimationFrame(revealInView); });
+  window.addEventListener('load', revealInView);
+  setTimeout(revealInView, 1200);
+
+  /* ---- Count up ---- */
+  function countUp(el){
+    var target = +el.getAttribute('data-count');
+    var suffix = el.getAttribute('data-suffix')||'';
+    var prefix = el.getAttribute('data-prefix')||'';
+    if(reduce){ el.textContent = prefix + target.toLocaleString('es-ES') + suffix; return; }
+    var dur = 1500, start = null;
+    function step(ts){
+      if(start===null) start = ts;
+      var t = Math.min(1,(ts-start)/dur), e = 1-Math.pow(1-t,3);
+      el.textContent = prefix + Math.round(target*e).toLocaleString('es-ES') + suffix;
+      if(t<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ---- Gold dust ---- */
+  document.querySelectorAll('[data-dust]').forEach(function(d){
+    if(reduce) return;
+    for(var i=0;i<14;i++){
+      var s=document.createElement('i');
+      var sz=(Math.random()*2.4+1.6).toFixed(1);
+      s.style.left=(Math.random()*100).toFixed(2)+'%';
+      s.style.width=sz+'px'; s.style.height=sz+'px';
+      s.style.animationDuration=(Math.random()*16+16).toFixed(1)+'s';
+      s.style.animationDelay=(-Math.random()*28).toFixed(1)+'s';
+      d.appendChild(s);
+    }
+  });
+
+  /* ---- Sticky bar + progress ---- */
+  var bar = document.getElementById('stickybar');
+  var prog = document.getElementById('progress');
+  var hero = document.querySelector('.hero');
+  function onScroll(){
+    var sc = window.scrollY || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h>0 ? (sc/h*100) : 0) + '%';
+    var trigger = hero ? hero.offsetHeight*0.6 : 600;
+    if(sc > trigger){ bar.classList.add('show'); } else { bar.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  /* ---- FAQ: cerrar otros al abrir ---- */
+  var faqs = document.querySelectorAll('.faq details');
+  faqs.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){ faqs.forEach(function(o){ if(o!==d) o.open=false; }); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
